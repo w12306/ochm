@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>业务管理系统</title>
+    <link rel="stylesheet" href="/resource/css/style.css"/>
+    <link rel="stylesheet" href="/resource/css/style.fix.css"/>
+    <link rel="stylesheet" href="/resource/css/ST_admin.css">
+    <link rel="stylesheet" href="/resource/css/beeui.css">
+    <link rel="stylesheet" type="text/css" href="/resource/css/uploadify.css">
+    <script src="/modules/lib/sea.js"></script>
+    <script src="/resource/js/jquery.js"></script>
+    <script src="/resource/js/ST.Config.js"></script>
+    <script>
+        $.extend(ST.ACTION,{
+            contractDeatil:"", //获取详情
+            contractUpload:"", //上传接口
+            editContract:"1234"   //表单提交
+        });
+    </script>
+</head>
+<body>
+    <!--header start-->
+    <div class="header">
+        <div class="header-inner clearfix">
+            <h1 class="logo pull-left"><a href="javascript:;">LOGO</a></h1>
+            <ul class="nav nav-inline pull-right">
+                <li>你好,luyuting10</li>
+                <li id="li_agent"><a href="javascript:;">同步代理商</a></li>
+                <li id="li_netbar"><a href="javascript:;">同步网吧</a></li>
+                <li id="li_game"><a href="javascript:;">同步游戏</a></li>
+                <li id="li_config"><a href="javascript:;">配置文件生成</a></li>           
+                <li id="li_matrix"><a href="javascript:;">同步MATRIX数据</a></li>
+                <li><a href="https://adps.tnt.com.com/Index/logout">退出</a></li>
+            </ul>
+        </div>
+
+        <div class="tab">
+            <ul class="nav nav-tabs nav-blue tab-trigger">
+                <li><a href="/">首页</a></li>
+                <li class="active"><a href="#">业务管理</a></li>
+                <li><a href="#">合同管理</a></li>
+                <li><a href="#">发票管理</a></li>
+                <li><a href="#">回款管理</a></li>
+                <li><a href="#">支出管理</a></li>
+                <li><a href="#">坏账管理</a></li>
+                <li><a href="#">保证金管理</a></li>
+                <li><a href="#">工具箱</a></li>      
+            </ul>
+        </div>
+    </div>
+    <!--header end-->
+
+    <div class="container">
+        <!-- aside start-->
+        <div class="aside" id="aside">
+            <ul class="nav nav-menu">
+                <li class="menu-on act">
+                    <a class="dropdown-toggle" href="javascript:;" data-cmd="slideNav">业务管理</a>
+                    <ul class="dropdown-menu" style="display: block;">
+                        <li class="active"><a href="#" data-id="">创建业务</a></li>
+                        <li class=""><a href="#" data-id="">待审核业务</a></li>
+                        <li class=""><a href="#" data-id="">带增加执行额</a></li>
+                        <li class=""><a href="#" data-id="">全部业务列表</a></li>
+                    </ul>     
+                </li>
+            </ul>
+        </div>
+        <!-- aside end-->
+
+        <div class="content p20">
+            <div class="heading clearfix">
+                <div class="pull-left">
+                    <h2>合同管理>创建合同</h2>
+                </div>
+            </div>
+
+            <div id="js-container"></div>
+    
+        </div>
+    </div>
+
+<script>
+    seajs.use('view/contract/add', function (app) {
+        app({
+            el: '#js-container'
+        });
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<form id="js-form-validate" action="<%=actionUrl%>" method="">
+	<table class="table table-listing table-hovered" style="width:430px;">
+		<tbody>
+		<tr>
+			<td class="span3">合作方：</td>
+			<td><%=company%></td>
+		</tr>
+	    <tr>
+	    	<td class="span3"><%=title%>金额：</td>
+	    	<td>
+	    		<input class="input input-small" type="text" name="amount" value="<%=amount%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+	    	</td>
+	    </tr>
+	    <tr>
+            <td class="span3"></td>
+            <td>
+            	<input type="hidden" name="id" value="<%=id%>">
+                <input class="btn btn-blue" type="submit" value="确定">
+                <a class="btn js-confirm-n" href="javascript:;">取消</a>
+            </td>
+        </tr>
+	    </tbody>
+   </table>
+</form>

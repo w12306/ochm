@@ -1,0 +1,87 @@
+<form id="js-consumer-form-validate" action="<%=ST.ACTION.editConsumer%>" method="">
+<table class="table table-listing table-hovered">
+    <tbody>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>客户名称：</td>
+            <td>
+                <input class="input input-small" type="text"  name="company_name" value="<%=data.company_name%>" data-rules="required" >
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span4"><em class="text-red">* </em>执行小组：</td>
+            <td>
+                <table class="table table-listing">
+                    
+                <% if(!_.isArray(data.team)){ %>
+                <%for(var t in data.team){
+                    var team_t = data.team[t];%>
+                        <tr>
+                            <td style="width: 100px; text-align: right;">
+                        <span class="inline-block span3" style="text-align:left; width: auto;"><%= t%></span>
+                            </td>
+                            <td>
+                            <%for(var i=0;i<team_t.length;i++){%>
+                            <label for="" class="inline-block span3" style="text-align:left;width: auto;margin-left: 10px;">
+                                <input type="checkbox" name="team[]" data-department-name="<%=team_t[i].key%>"
+                                 data-rules="least" data-group="deparment" data-holder="#deparment_help"
+                                    value="<%=team_t[i].value%>" <%=(team_t[i].s==1?"checked":"")%> >
+                                <%=team_t[i].key%>
+                            </label>
+                            <%}%>        
+                            </td>
+                        </tr>
+                <%}%>
+				<%}%>
+                </table>
+                <div id="team" class="inline-block"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span4"><em class="text-red">* </em>合作方：</td>
+            <td>
+                <a href="javascript:;" class="btn" id="js-choose-partner">添加已有合作方</a>
+                <a href="javascript:;" class="btn" id="js-add-partner">新增</a>
+                <div id="choosed-box" class="mt10">
+                    <%for(var i=0;i<data.partner_id.length;i++){%>
+                        <div>
+                            <label>
+                                <input type="checkbox" name='partner_id[]' value='<%=data.partner_id[i].key%>' data-rules="least" data-group="partner_id" data-holder="#partner_id"  class='mr10 partner_id' 
+                                <%=(data.partner_id[i].s==1?"checked":"")%>/><%=data.partner_id[i].value%>
+                            </label>
+                        </div>
+                    <%}%>
+                </div>
+                <div id="partner_id"></div>
+                <!--
+                <input type="text" id="" name="choosed-partner" class="hidden" data-rules="required">
+                -->
+            </td>
+        </tr>
+		
+		<tr>
+            <td class="span4"><em class="text-red">* </em>分配所属用户：</td>
+            <td>
+                <div id="user-choosed-box" class="inline-block"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span4">备注：</td>
+            <td>
+                <textarea name="remark" id="" cols="50" rows="5"><%=data.remark%></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span4"></td>
+            <td>
+                <input type="hidden" name="id" id="company_id" value='<%=data.id%>'>
+                <input class="btn btn-blue" type="submit" value="确定">
+                <a class="btn" href="javascript:history.go(-1);">返回上一页</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</form>

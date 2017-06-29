@@ -1,0 +1,71 @@
+<form id="js-add-partner-form-validate" action="<%=ST.ACTION.editPartner%>" method="">
+<table class="table table-listing table-hovered" style="width:520px;">
+    <tbody>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>公司类型：</td>
+            <td>
+                <%for(var i=0;i<data.company_type.length;i++){%>
+                <label>
+                    <input type="radio" name="company_type" value="<%=data.company_type[i].key%>" <%=(data.company_type[i].s==1?"checked":"")%>
+                     data-rules="least" data-group="company_type" data-holder="#company_type_help"  >
+                    <span class="pr10"><%=data.company_type[i].value%></span>
+                </label>
+                <%}%>
+                <div id="company_type_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>公司全称：</td>
+            <td>
+                <input class="input input-small" type="text" name="company_name" value="<%=data.company_name%>" data-rules="required">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>初始余额：</td>
+            <td>
+                <input class="input input-small" maxlength="12" type="text"  name="balance" value="<%=data.balance%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>纳税识别码：</td>
+            <td>
+                <input class="input input-small" type="text" name="taxkey" value="<%=data.taxkey%>" data-rules="required">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4">公司简称：</td>
+            <td>
+                <input class="input input-small" type="text" name="nickname" value="<%=data.nickname%>">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4">公司地址：</td>
+            <td>
+                <input class="input input-small" type="text" name="address" value="<%=data.address%>">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4">公司电话：</td>
+            <td>
+                <input class="input input-small" type="text" name="tel" value="<%=data.tel%>" data-rules="match(/((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/)" data-msg="请输入正确的电话格式">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4">联系人：</td>
+            <td>
+                <input class="input input-small" type="text" name="boss" value="<%=data.boss%>">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span4"></td>
+            <td>
+                <input type="hidden" name="id" value="<%=data.id%>">
+                <input class="btn btn-blue" type="submit" value="确定">
+                <a class="btn js-cancel" href="javascript:;">取消</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</form>

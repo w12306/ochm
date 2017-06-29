@@ -1,0 +1,249 @@
+<form id="js-execution-validate" action="<%=ST.ACTION.executionAdd%>" method="" onSubmit="return false">
+    <table class="table table-listing">
+        <tbody>
+            <tr>
+                <td class="span4"><em class="text-red">* </em>客户名称：</td>
+                <td>
+                    <select name="company_id" id="company_id" placeholder="选择客户" class="js-selectbox js-relate-selectbox" 
+                        data-relate-id="partner_id_select;product_id_select" data-relate-action="<%=ST.ACTION.getPartner%>;<%=ST.ACTION.getProduct%>" data-rules="required">
+                        <%for(var i=0;i<data.company_id.length;i++){%>
+                            <option value="<%=data.company_id[i].key%>" <%=(data.company_id[i].s==1?"selected":"")%> ><%=data.company_id[i].value%></option>
+                        <%}%>
+                    </select>
+                    <!--<a href="<%=ST.ACTION.addConsumerUrl%>" class="btn">新增</a>-->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="span4"><em class="text-red">* </em>合作方：</td>
+                <td>
+                    <div class="inline-block">
+                        <select name="partner_id" placeholder="选择合作方"  class="js-selectbox" data-rules="required" id="partner_id_select">
+                            <%for(var i=0;i<data.partner_id.length;i++){%>
+                                <option value="<%=data.partner_id[i].key%>" <%=(data.partner_id[i].s==1?"selected":"")%> ><%=data.partner_id[i].value%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                   <!-- <a href="javascript:;" class="btn" id="js-add-partner">新增</a>-->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="span4"><em class="text-red">* </em>产品名称：</td>
+                <td>
+                    <div class="inline-block">
+                    <select name="product_id" class="js-selectbox" placeholder="请选择" data-rules="required" id="product_id_select">
+                        <%for(var i=0;i<data.product_id.length;i++){%>
+                            <option value="<%=data.product_id[i].key%>" <%=(data.product_id[i].s==1?"selected":"")%> ><%=data.product_id[i].value%></option>
+                        <%}%>
+                    </select>
+                    </div>
+                    <!--<a href="javascript:;" class="btn" id="js-add-product">新增</a>-->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="span4"><em class="text-red">* </em>产品简称：</td>
+                <td>
+                    <input type="text" name="pd_sname" class="input input-small" value="<%=data.pd_sname%>" data-rules="required" >
+                </td>
+            </tr>
+
+            <tr>
+                <td class="span4">合作方式：</td>
+                <td>
+                    <select name="business_cooperation" class="js-selectbox js-partner" placeholder="请选择">
+                        <%for(var i=0;i<data.business_cooperation.length;i++){%>
+                            <option value="<%=data.business_cooperation[i].key%>"  <%if(data.business_cooperation[i].s){%>selected<%}%> ><%=data.business_cooperation[i].value%></option>
+                        <%}%>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="span4">区域定向：</td>
+                <td>
+                    <label class="pr10">
+                        <input type="radio" name="target_type" class="js-area" value="1" opt="nrq">全国
+                    </label>
+
+                    <label class="pr10">
+                        <input type="radio" name="target_type" class="js-area" value="2" opt="nrq">选部分地域
+                    </label>
+
+                    <label class="pr10">
+                        <input type="radio" name="target_type" class="js-area" value="3" opt="radio">选择GID定向投放
+                    </label><br>
+                    
+                    <div id="_cityselect" style="margin-top:10px;display:block"></div>
+                    <input id="_pvs" name="prov" type="hidden" value=""/> <!--存放省份选择值-->
+                    <input id="_city" name="city_ids" type="hidden" value="<%=data.city_ids%>"/> <!--存放城市选择值-->
+
+                    <textarea class="fn_postcond_val input-largest hidden" name="gid_string" id="netbar" rows="5" ><%=data.gid_string%></textarea>
+                </td>
+            </tr>
+			<tr>
+                <td class="span4">备注：</td>
+                <td>
+				<textarea name="bz"  rows="4" cols="40"><%=data.bz%></textarea>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+
+    <div class="s-menu-wrap mt20" >
+        <div class="s-menu">
+            <span class="icon-btn-wrap  js-bold" >
+                <span class="icon-btn s-toolbar-icon s-toolbar-icon-bold" ></span>
+            </span>
+
+            <div class="dropdown-menu-color d-menu-wrap js-color">
+                <div class="d-menu-display-wrap" >
+                    <div data-val="#2b2b2b">
+                        <span class="menu-item-text color-menu-selected">
+                            <span class="s-toolbar-icon s-toolbar-icon-font-color"></span>
+                            <span class="color-underline" style="background:#2b2b2b;"></span>
+                        </span>
+                        <span class="menu-item-selected-icon s-toolbar-icon"></span>
+                    </div>
+                    <span class="tooltip hide s-tooltip">字体颜色</span>
+                </div>
+
+                <div class="menu-wrap hide">
+                    <div class="menu-item" >
+                        <div data-val="#0d0015" class="color-menu-item" style="background:#0d0015;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#fe2c23" class="color-menu-item" style="background:#fe2c23;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#ff9900" class="color-menu-item" style="background:#ff9900;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#ffd900" class="color-menu-item" style="background:#ffd900;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#a3e043" class="color-menu-item" style="background:#a3e043;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#37d9f0" class="color-menu-item" style="background:#37d9f0;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#4da8ee" class="color-menu-item" style="background:#4da8ee;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#aa17d0" class="color-menu-item" style="background:#aa17d0;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#c8cbd0" class="color-menu-item" style="background:#c8cbd0;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown-menu-color d-menu-wrap js-bgcolor">
+                <div class="d-menu-display-wrap" >
+                    <div data-val="#2b2b2b">
+                        <span class="menu-item-text color-menu-selected">
+                            <span class="s-toolbar-icon s-toolbar-icon-paint-brush"></span>
+                            <span class="color-underline" style="background:#2b2b2b;"></span>
+                        </span>
+                        <span class="menu-item-selected-icon s-toolbar-icon"></span>
+                    </div>
+                    <span class="tooltip hide s-tooltip">背景色</span>
+                </div>
+
+                <div class="menu-wrap hide">
+                    <div class="menu-item" >
+                        <div data-val="#0d0015" class="color-menu-item" style="background:#0d0015;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#fe2c23" class="color-menu-item" style="background:#fe2c23;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#ff9900" class="color-menu-item" style="background:#ff9900;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#ffd900" class="color-menu-item" style="background:#ffd900;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#a3e043" class="color-menu-item" style="background:#a3e043;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#37d9f0" class="color-menu-item" style="background:#37d9f0;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#4da8ee" class="color-menu-item" style="background:#4da8ee;"></div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="#aa17d0" class="color-menu-item" style="background:#aa17d0;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown-menu-align d-menu-wrap unactive js-align">
+                <div class="d-menu-display-wrap" >
+                    <div data-val="left" >
+                        <span class="s-toolbar-icon s-toolbar-icon-align-left" ></span>
+                        <span class="menu-item-selected-icon s-toolbar-icon" ></span>
+                    </div>
+                </div>
+                <div class="menu-wrap" >
+                    <div class="menu-item menu-item-selected">
+                        <div data-val="left" class="align-menu-item">
+                            <span class="s-toolbar-icon s-toolbar-icon-align-left" ></span>
+                        </div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="center" class="align-menu-item" >
+                            <span class="s-toolbar-icon s-toolbar-icon-align-center"></span>
+                        </div>
+                    </div>
+                    <div class="menu-item" >
+                        <div data-val="right" class="align-menu-item" >
+                            <span class="s-toolbar-icon s-toolbar-icon-align-right" ></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="f-right" style="margin-top: -5px;">
+            <li>
+                <span>购买</span> <span class="color-red"></span>
+            </li>
+
+            <li>
+                <span>配送</span> <span class="color-green"></span>
+            </li>
+
+            <li>
+                <span>框架</span> <span class="color-purple"></span>
+            </li>
+
+            <li>
+                <span>额外支持</span> <span class="color-blue"></span>
+            </li>
+
+            <li>
+                <span>售罄</span> <span class="color-gray"></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="js-container-table" class="mt20" >
+    </div>
+    <a title="添加跨月排期" href="javascript:;" class="btn mr5 mt20 js-add-htable">添加跨月排期</a>  
+
+    <div class="center mt20">
+        <input type="hidden" name="id" value="<%=data.id%>">
+        <%if(data.status==1){%>
+            <a class="btn js-save" href="javascript:;" data-status="1">存草稿</a>
+        <%}%>
+        
+        <a class="btn js-save" href="javascript:;" data-status="2">提交执行单</a>
+        <!--<input class="btn btn-blue" type="submit" value="提交执行单">-->
+        <a class="btn" href="javascript:history.go(-1);">取消</a>
+    </div>
+</form>

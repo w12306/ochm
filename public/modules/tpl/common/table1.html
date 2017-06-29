@@ -1,0 +1,25 @@
+<div class="datatable datatable-default mb20 js-tb" style="width:100%;">
+<ol class="datatable-bd">   
+    <!-- 固定显示部分-->
+    <%for(var i=0;i<title.length;i++){
+        if(title[i].type==1){%>
+            <li class="datatable-col">
+            <div class="datatable-col">
+                <div class="datatable-cell datatable-gray" style="padding:0">
+                    <div class="tbtitle"><%=title[i].name%></div>
+                </div>
+                <% for(var j=0,arr = data[title[i].key];j<arr.length;j++){%>
+                    <div class="datatable-cell" style="height: <%=(arr[j].num*h+arr[j].num-1)%>px;line-height: <%=h%>px" 
+                        <%if(arr[j].value&&arr[j].value.toString().replace(/[^x00-xff]/g,"01").length>24){%>title="<%=arr[j].value%>"<%}%> >
+                        <%=arr[j].value%>
+                    </div>
+                <%}%>
+            </div>
+            </li>
+        <%}else{
+            break;
+        }%>
+    <%}%>
+</ol>
+
+</div>

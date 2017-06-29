@@ -1,0 +1,29 @@
+<h4 id="amount-title"><%=title%>：</h4>
+<form id="js-amount-form-validate" action="<%=ST.ACTION.addAmount%>" method="post">
+<table class="table table-listing" style="width:600px">
+    <tbody>
+    <tr>
+        <td class="span4"><em class="text-red">* </em>执行月份</td>
+        <td>
+            <input type="text" name="month" value="<%=data.month%>" class="input" id="_calender_month" placeholder="" data-rules="required">
+        </td>
+    </tr>
+    <tr>
+        <td class="span4"><em class="text-red">* </em>执行金额</td>
+        <td>
+            <input type="text" name="amount" maxlength="12" value="<%=data.amount%>" class="input" id="_amount" placeholder="" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+        </td>
+    </tr>
+
+    <tr class="tr_bg">
+        <th></th>
+        <td>
+            <input type="hidden" name="busid" value="<%=busid%>">
+            <input type="hidden" name="id" value="<%=data.id%>" id="amount-id">
+            <input type="submit" class="btn btn-blue add-amount-y" value="确定">
+            <a href="javascript:;" class="btn add-amount-n" value="取消">取消</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</form>

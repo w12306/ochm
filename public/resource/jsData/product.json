@@ -1,0 +1,175 @@
+{
+    "status": "success",
+    "info": "",
+    "data": {
+        "id":"1",
+        "game_screen": [{
+            "key": "3D",
+            "value": "3D",
+            "s": 0
+        }, {
+            "key": "2.5D",
+            "value": "2.5D",
+            "s": 0
+        }, {
+            "key": "2D",
+            "value": "2D",
+            "s": 0
+        }],
+        "mode_type": [{
+            "key": "\u7b56\u7565",
+            "value": "\u7b56\u7565",
+            "s": 0
+        }, {
+            "key": "\u52a8\u4f5c",
+            "value": "\u52a8\u4f5c",
+            "s": 0
+        }, {
+            "key": "\u56de\u5408",
+            "value": "\u56de\u5408",
+            "s": 0
+        }, {
+            "key": "\u5373\u65f6\u6218\u7565",
+            "value": "\u5373\u65f6\u6218\u7565",
+            "s": 0
+        }, {
+            "key": "\u89d2\u8272\u626e\u6f14",
+            "value": "\u89d2\u8272\u626e\u6f14",
+            "s": 0
+        }, {
+            "key": "\u7ade\u901f",
+            "value": "\u7ade\u901f",
+            "s": 0
+        }, {
+            "key": "\u68cb\u724c",
+            "value": "\u68cb\u724c",
+            "s": 0
+        }, {
+            "key": "\u5c04\u51fb",
+            "value": "\u5c04\u51fb",
+            "s": 0
+        }, {
+            "key": "\u4f53\u80b2",
+            "value": "\u4f53\u80b2",
+            "s": 0
+        }, {
+            "key": "\u97f3\u4e50\u821e\u8e48",
+            "value": "\u97f3\u4e50\u821e\u8e48",
+            "s": 0
+        }],
+        "game_theme": [{
+            "key": "\u5947\u5e7b",
+            "value": "\u5947\u5e7b",
+            "s": 0
+        }, {
+            "key": "\u7384\u5e7b",
+            "value": "\u7384\u5e7b",
+            "s": 0
+        }, {
+            "key": "\u9b54\u5e7b",
+            "value": "\u9b54\u5e7b",
+            "s": 0
+        }, {
+            "key": "\u79d1\u5e7b",
+            "value": "\u79d1\u5e7b",
+            "s": 0
+        }, {
+            "key": "\u6b66\u4fa0",
+            "value": "\u6b66\u4fa0",
+            "s": 0
+        }, {
+            "key": "\u5386\u53f2",
+            "value": "\u5386\u53f2",
+            "s": 0
+        }, {
+            "key": "\u5176\u4ed6",
+            "value": "\u5176\u4ed6",
+            "s": 0
+        }],
+        "screen_style": [{
+            "key": "Q\u7248",
+            "value": "Q\u7248",
+            "s": 0
+        }, {
+            "key": "\u5361\u901a",
+            "value": "\u5361\u901a",
+            "s": 0
+        }, {
+            "key": "\u5199\u5b9e",
+            "value": "\u5199\u5b9e",
+            "s": 0
+        }],
+        "business_model": [{
+            "key": "\u72ec\u7acb",
+            "value": "\u72ec\u7acb",
+            "s": 0
+        }, {
+            "key": "\u8054\u5408",
+            "value": "\u8054\u5408",
+            "s": 0
+        }],
+        "charging_mode": [{
+            "key": "\u9053\u5177",
+            "value": "\u9053\u5177",
+            "s": 0
+        }, {
+            "key": "\u65f6\u95f4",
+            "value": "\u65f6\u95f4",
+            "s": 0
+        }],
+        "game_type": [{
+            "key": "MMO",
+            "value": "MMO",
+            "s": 0
+        }, {
+            "key": "\u4f11\u95f2",
+            "value": "\u4f11\u95f2",
+            "s": 0
+        }],
+        "type": [{
+            "key": "\u7f51\u9875\u6e38\u620f",
+            "value": "\u7f51\u9875\u6e38\u620f",
+            "s": 1
+        }, {
+            "key": "\u7f51\u7edc\u6e38\u620f",
+            "value": "\u7f51\u7edc\u6e38\u620f",
+            "s": 0
+        },
+        {
+            "key": "手机游戏",
+            "value": "手机游戏",
+            "s": 0
+        },
+        {
+            "key": "移动应用",
+            "value": "移动应用",
+            "s": 0
+        },
+        {
+            "key": "电子商务",
+            "value": "电子商务",
+            "s": 0
+        },
+        {
+            "key": "PC软件",
+            "value": "PC软件",
+            "s": 0
+        },
+        {
+            "key": "传统行业",
+            "value": "传统行业",
+            "s": 0
+        },
+        {
+            "key": "其他",
+            "value": "其他",
+            "s": 0
+        }],
+        "name": "啦啦啦",
+        "company_id": [{
+            "key": 1,
+            "value": "\u6e56\u5317\u76db\u5929\u7f51\u7edc",
+            "s": 0
+        }]
+    }
+}

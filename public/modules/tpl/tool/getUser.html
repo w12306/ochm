@@ -1,0 +1,15 @@
+<table class="table table-listing">
+    <tbody>
+        <tr>
+            <td>
+                <% _.each( data ,function(item){ %>
+                <label class="inline-block span3" for="" style="text-align:left;width: auto;margin-left: 10px;">
+                    <input data-group="deparment" data-rules="least" name="user_ids[]" value='<%= item.id%>' type="checkbox" <%=(item.selected==1?"checked":"")%> >
+                        <%= item.name%>
+                    </input>
+                </label>
+                <%})%>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,104 @@
+{
+     "status":"success",
+     "info":"",
+     "data":{
+          "id":"",
+          "company_id": [{
+                "key": 1,
+                "value": "\u7c92\u7c92\u9999",
+                "s": 0
+            },
+            {
+                "key": 2,
+                "value": "\u4ea7\u54c1111",
+                "s": 0
+            }],
+            "partner_id": [{
+                    "key": 1,
+                    "value": "\u7c92\u7c92\u9999",
+                    "s": 0
+                },
+                {
+                    "key": 2,
+                    "value": "\u4ea7\u54c1111",
+                    "s": 0
+                }
+            ],
+           "product_id": [
+                {
+                    "key": 1,
+                    "value": "\u7c92\u7c92\u9999",
+                    "s": 0
+                },
+                {
+                    "key": 2,
+                    "value": "\u4ea7\u54c1111",
+                    "s": 0
+                }
+            ],
+          "pd_sname": "\u540d",
+          "business_cooperation": [
+               {
+                 "key": "HKD",
+                 "value": "HKD",
+                 "s": 0
+               },
+               {
+                 "key": "FRD",
+                 "value": "FRD",
+                 "s": 1
+               },
+               {
+                 "key": "CHK",
+                 "value": "CHK",
+                 "s": 0
+               },
+               {
+                 "key": "DYU",
+                 "value": "DYU",
+                 "s": 0
+               }
+          ],
+          "target_type": "3",
+          "gid_string": "1006458,56654522",
+          "city_ids":"",
+          "advertis": [
+                {
+                    "key": "1",
+                    "value": "\u5ba2\u6237\u7aef\u63a8\u9001"
+                },
+                {
+                    "key": "2",
+                    "value": "\u53f3\u4e0b\u89d2\u5f39\u7a97"
+                },
+                {
+                    "key": "3",
+                    "value": "\u4eba\u6c14\u65b0\u6e38"
+                },
+                {
+                    "key": "4",
+                    "value": "\u6e38\u620f\u9000\u5f39"
+                }
+            ],
+            "sell_type": [
+                {
+                    "key": "1",
+                    "value": "\u8d2d\u4e70"
+                },
+                {
+                    "key": "2",
+                    "value": "\u914d\u9001"
+                },
+                {
+                    "key": "3",
+                    "value": "\u6846\u67b6"
+                },
+                {
+                    "key": "4",
+                    "value": "\u989d\u5916\u652f\u6301"
+                }
+            ],
+          "table":null
+     }
+     
+}

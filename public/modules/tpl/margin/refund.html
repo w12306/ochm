@@ -1,0 +1,46 @@
+<form id="js-form-validate" action="<%=actionUrl%>" method="">
+	<table class="table table-listing table-hovered" style="width:430px;">
+		<tbody>
+		<tr>
+			<td class="span3">合作方：</td>
+			<td><%=company%></td>
+		</tr>
+	    <tr>
+	    	<td class="span3"><%=title%>金额：</td>
+	    	<td>
+	    		<input class="input input-small" type="text" maxlength="12" name="amount" value="<%=amount%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+	    	</td>
+	    </tr>
+	    <tr>
+            <td class="span3"></td>
+            <td>
+                <input type="hidden" name="earnestcash_id" value="<%=aid%>">
+            	<input type="hidden" name="id" value="<%=id%>">
+                <input class="btn btn-blue" type="submit" value="确定">
+                <a class="btn js-confirm-n" href="javascript:;">取消</a>
+            </td>
+        </tr>
+	    </tbody>
+   </table>
+</form>
+<table class="table table-listing">
+    <thead class="thead-gray">
+    <tr>
+        <th>执行月份</th>
+        <th><%=title%>金额</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    	<%for(var i=0;i<data.length;i++){%>
+        <tr>
+            <td><%=data[i].date%></td>
+            <td><%=data[i].amount%></td>
+            <td>
+                <a href="javascript:;" class="js-amount-edit"  data-id="<%=data[i].id%>" data-amount="<%=data[i].amount%>" data-date="<%=data[i].date%>" title="修改">修改</a>
+                <a href="javascript:;" class="js-amount-delete" data-id="<%=data[i].id%>"  title="删除">删除</a>
+            </td>
+        </tr>
+        <%}%>
+    </tbody>
+</table>

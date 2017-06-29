@@ -1,0 +1,40 @@
+<tr class="js-execution-relate-tr">
+    <td class="span4"><em class="text-red">* </em>客户名称：</td>
+    <td>
+        <select name="company_id" id="company_id" placeholder="选择客户" class="js-selectbox js-relate-selectbox" 
+            data-relate-id="partner_id_select;product_id_select" data-relate-action="<%=ST.ACTION.getPartner%>;<%=ST.ACTION.getProduct%>" data-rules="required">
+            <%for(var i=0;i<data.company_id.length;i++){%>
+                <option value="<%=data.company_id[i].key%>" <%=(data.company_id[i].s==1?"selected":"")%> ><%=data.company_id[i].value%></option>
+            <%}%>
+        </select>
+        <a href="<%=ST.ACTION.addConsumerUrl%>" class="btn">新增</a>
+    </td>
+</tr>
+
+<tr class="js-execution-relate-tr">
+    <td class="span4"><em class="text-red">* </em>合作方：</td>
+    <td>
+        <div class="inline-block">
+            <select name="partner_id" placeholder="选择合作方"  class="js-selectbox" data-rules="required" id="partner_id_select">
+                <%for(var i=0;i<data.partner_id.length;i++){%>
+                    <option value="<%=data.partner_id[i].key%>" <%=(data.partner_id[i].s==1?"selected":"")%> ><%=data.partner_id[i].value%></option>
+                <%}%>
+            </select>
+        </div>
+       <!-- <a href="javascript:;" class="btn" id="js-add-partner">新增</a>-->
+    </td>
+</tr>
+
+<tr class="js-execution-relate-tr">
+    <td class="span4"><em class="text-red">* </em>产品名称：</td>
+    <td>
+        <div class="inline-block">
+        <select name="product_id" class="js-selectbox" placeholder="请选择" data-rules="required" id="product_id_select">
+            <%for(var i=0;i<data.product_id.length;i++){%>
+                <option value="<%=data.product_id[i].key%>" <%=(data.product_id[i].s==1?"selected":"")%> ><%=data.product_id[i].value%></option>
+            <%}%>
+        </select>
+        </div>
+        <a href="javascript:;" class="btn" id="js-add-product">新增</a>
+    </td>
+</tr>

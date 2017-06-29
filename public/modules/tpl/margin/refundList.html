@@ -1,0 +1,30 @@
+<h4 class="mt20">已添加的执行额列表：</h4>
+<table class="table table-listing">
+    <thead class="thead-gray">
+    <tr>
+        <th>执行月份</th>
+        <th>执行金额</th>
+        <th>录入时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+        <%for(var i=0;i<data.length-1;i++){%>
+        <tr>
+            <td><%=data[i].month%></td>
+            <td><%=data[i].amount%></td>
+            <td><%=data[i].created_at%></td>
+            <td>
+                <a href="javascript:;" class="js-amount-edit"  data-id="<%=data[i].id%>" data-amount="<%=data[i].amount%>" data-month="<%=data[i].month%>" title="修改">修改</a>
+                <a href="javascript:;" class="js-amount-delete" data-id="<%=data[i].id%>"  title="删除">删除</a>
+            </td>
+        </tr>
+        <%}%>
+        <tr>
+            <td>总计</td>
+            <td><%=data[i].amount%></td>
+            <td>--</td>
+            <td>--</td>
+        </tr>
+    </tbody>
+</table>
