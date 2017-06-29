@@ -1,0 +1,51 @@
+<%var i = this.info();%>
+<div class="paging">
+    <ul>
+        <li><span><%=i.totalRecords%>条记录</span></li>
+        <%if(i.lastPage!=1){%>
+
+        <% if (i.currentPage > i.firstPage) { %>
+        <li class="prev js-prev"><a href="javascript:;"><i class="icon icon-prev"></i></a></li>
+        <% }else{%>
+        <li class="prev disabled"><a href="javascript:;"><i class="icon icon-prev"></i></a></li>
+        <% }%>
+
+        <% if (i.currentPage != i.firstPage) { %>
+        <li class="first js-first"><a href="javascript:;"><%=i.firstPage%></a></li>
+        <% }else {%>
+        <li class="first active"><a href="javascript:;"><%=i.firstPage%></a></li>
+        <% } %>
+
+        <% if (i.pageSetInRange[0]>1){%>
+        <li><a href="javascript:;">...</a></li>
+        <% }%>
+
+        <% _.each( i.pageSetInRange, function(p){%>
+        <%if(_.indexOf([i.firstPage,i.lastPage],p) == -1){%>
+        <% if (i.currentPage == p) { %>
+        <li class="active"><a href="javascript:;"><%= p %></a></li>
+        <% } else { %>
+        <li class="js-page" data-page="<%=p%>"><a href="javascript:;"><%= p %></a></li>
+        <% } %>
+        <%}%>
+        <%});%>
+
+        <% if (i.pageSetInRange[i.pageSetInRange.length-1]< i.lastPage){%>
+        <li><a href="javascript:;">...</a></li>
+        <% }%>
+
+        <% if (i.currentPage != i.lastPage) { %>
+        <li class="last js-last"><a href="javascript:;"><%=i.lastPage%></a></li>
+        <% }else {%>
+        <li class="last active"><a href="javascript:;"><%=i.lastPage%></a></li>
+        <% } %>
+
+        <% if (i.currentPage < i.lastPage) { %>
+        <li class="next js-next"><a href="javascript:;"><i class="icon icon-next"></i></a></li>
+        <% }else{ %>
+        <li class="next disabled"><a href="javascript:;"><i class="icon icon-next"></i></a></li>
+        <% }%>
+
+        <%}%>
+    </ul>
+</div>

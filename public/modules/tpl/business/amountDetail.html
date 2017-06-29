@@ -1,0 +1,18 @@
+<table class="table table-listing border-table">
+    <thead class="thead-gray">
+    <tr>
+        <th>业务编号</th>
+        <th>实际金额</th>
+        <th>已执行金额</th>
+        <th>可执行金额</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= title %></td>
+            <td><%= active_amount %></td>
+            <td><%= delivery_amount %></td>
+            <td><%= active_amount - delivery_amount %></td>
+        </tr>
+    </tbody>
+</table>

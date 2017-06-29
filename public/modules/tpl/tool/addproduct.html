@@ -1,0 +1,126 @@
+<form id="js-add-partner-form-validate" action="<%=ST.ACTION.addProductList%>" method="" style="min-height:350px;">
+<table class="table table-listing table-hovered" style="width:860px;">
+    <tbody>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>产品名称：</td>
+            <td>
+                <input class="input input-small" type="text" id="" name="name" value="<%=data.name%>" data-rules="required">
+            </td>
+        </tr>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>客户名称：</td>
+            <td>
+                <select name="company_id" placeholder="选择客户" class="js-selectbox" data-rules="required">
+                    <%for(var i=0;i<data.company_id.length;i++){%>
+                        <option value="<%=data.company_id[i].key%>" <%=(data.company_id[i].s==1?"selected":"")%> ><%=data.company_id[i].value%></option>
+                    <%}%>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="span4"><em class="text-red">* </em>产品类型：</td>
+            <td>
+                <%for(var i=0;i<data.type.length;i++){%>
+                    <label><input  data-rules="least" data-group="type" type="radio" name="type" data-holder="#type_help"
+                     value="<%=data.type[i].key%>" <%=(data.type[i].s==1?"checked":"")%> >
+                     <span class="pr10"><%=data.type[i].value%></span></label>
+                <%}%>
+                <div id="type_help" class="inline-block">
+            </td>
+        </tr>
+
+        <tr class="type-special hidden">
+            <td class="span4">游戏画面：</td>
+            <td>
+                <%for(var i=0;i<data.game_screen.length;i++){%>
+                    <label><input type="checkbox" data-rules="" data-group="game_screen" data-holder="#game_screen_help" name="game_screen[]" 
+                        value="<%=data.game_screen[i].key%>" <%=(data.game_screen[i].s==1?"checked":"")%>>
+                    <span class="pr10"><%=data.game_screen[i].value%></span></label>
+                <%}%>
+                <div id="game_screen_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+        <tr class="type-special hidden">
+            <td class="span4">模式类型：</td>
+            <td>
+                <%for(var i=0;i<data.mode_type.length;i++){%>
+                    <label><input  data-rules="" data-group="mode_type" type="radio" name="mode_type" data-holder="#mode_type_help"
+                     value="<%=data.mode_type[i].key%>" <%=(data.mode_type[i].s==1?"checked":"")%> >
+                     <span class="pr10"><%=data.mode_type[i].value%></span></label>
+                <%}%>
+                <div id="mode_type_help" class="inline-block">
+            </td>
+        </tr>
+        <tr class="type-special hidden">
+            <td class="span4">游戏题材：</td>
+            <td>
+                <%for(var i=0;i<data.game_theme.length;i++){%>
+                    <label><input type="checkbox" data-rules="" data-group="game_theme" data-holder="#game_theme_help" name="game_theme[]" 
+                     value="<%=data.game_theme[i].key%>" <%=(data.game_theme[i].s==1?"checked":"")%>>
+                    <span class="pr10"><%=data.game_theme[i].value%></span></label>
+                <%}%>
+                <div id="game_theme_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+        <tr class="type-special hidden">
+            <td class="span4">画面风格：</td>
+            <td>
+                <%for(var i=0;i<data.screen_style.length;i++){%>
+                    <label><input type="checkbox" data-rules="" data-group="screen_style" data-holder="#screen_style_help" name="screen_style[]"
+                     value="<%=data.screen_style[i].key%>" <%=(data.screen_style[i].s==1?"checked":"")%>>
+                    <span class="pr10"><%=data.screen_style[i].value%></span></label>
+                <%}%>
+                <div id="screen_style_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+        <tr class="type-special hidden">
+            <td class="span4">运营模式：</td>
+            <td>
+                <%for(var i=0;i<data.business_model.length;i++){%>
+                    <label><input type="checkbox" data-rules="" data-group="business_model" data-holder="#business_model_help" name="business_model[]"
+                     value="<%=data.business_model[i].key%>" <%=(data.business_model[i].s==1?"checked":"")%>>
+                    <span class="pr10"><%=data.business_model[i].value%></span></label>
+                <%}%>
+                <div id="business_model_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+        <tr class="type-special hidden">
+            <td class="span4">收费模式：</td>
+            <td>
+                <%for(var i=0;i<data.charging_mode.length;i++){%>
+                    <label><input type="checkbox" data-rules="" data-group="charging_mode" data-holder="#charging_mode_help" name="charging_mode[]"
+                     value="<%=data.charging_mode[i].key%>" <%=(data.charging_mode[i].s==1?"checked":"")%>>
+                    <span class="pr10"><%=data.charging_mode[i].value%></span></label>
+                <%}%>
+                <div id="charging_mode_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+        <tr class="type-special hidden">
+            <td class="span4">游戏类型：</td>
+            <td>
+                <%for(var i=0;i<data.game_type.length;i++){%>
+                    <label><input type="checkbox" data-rules="" data-group="game_type" data-holder="#game_type_help" name="game_type[]"
+                     value="<%=data.game_type[i].key%>" <%=(data.game_type[i].s==1?"checked":"")%>>
+                    <span class="pr10"><%=data.game_type[i].value%></span></label>
+                <%}%>
+                <div id="game_type_help" class="inline-block">
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span4"></td>
+            <td>
+                <input type="hidden" id="" name="id" value="<%=data.id%>">
+                <input class="btn btn-blue"  type="submit" value="确定">
+                <a class="btn js-cancel" href="javascript:;">取消</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</form>

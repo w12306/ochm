@@ -1,0 +1,27 @@
+{
+
+	"status": "success", 
+	"info": "",
+	"data": {
+		"id": "11",
+		"company_name": "aa",
+		"balance": "bbb",
+		"taxkey": "vvv",
+		"nickname": "ccc",
+		"address": "ddd",
+		"tel": "111",
+		"boss": "222",
+		"company_type": [{
+			"key": 1,
+			"value": "\u4ee3\u7406", 
+			"s": 1
+		},
+		{
+			"key": 2,
+			"value": "\u76f4\u5ba2",
+			 "s": 0
+		}
+		]
+	}
+
+}

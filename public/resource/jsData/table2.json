@@ -1,0 +1,312 @@
+{
+    "status": "success",
+    "info": "",
+	"data":{
+		"title":[
+			{
+				"name":"业务编号",
+				"key":"business_id",
+				"type":1
+			},
+			{
+				"name":"合作方",
+				"key":"partner_name",
+				"type":1
+			},
+			{
+				"name":"执行小组",
+				"key":"business_team_name",
+				"type":1
+			},
+			{
+				"name":"执行月份",
+				"key":"delivery_month",
+				"type":1
+			},
+			{
+				"name":"月执行金额(元)",
+				"key":"delivery_amount",
+				"type":1
+			},
+			{
+				"name":"支出金额(元)",
+				"key":"expenses_amount",
+				"type":0
+			},
+			{
+				"name":"支出类型",
+				"key":"expenses_type",
+				"type":0
+			},
+			{
+				"name":"支出客户",
+				"key":"expenses_partner_name",
+				"type":0
+			},
+			{
+				"name":"预约付款时间",
+				"key":"expenses_advance_time",
+				"type":0
+			},
+			{
+				"name":"付款金额",
+				"key":"expenses_payment",
+				"type":0
+			},
+			{
+				"name":"付款时间",
+				"key":"expenses_time",
+				"type":0
+			},
+			{
+				"name":"发票金额",
+				"key":"invoice_amount",
+				"type":0
+			},
+			{
+				"name":"发票编号",
+				"key":"invoice_key",
+				"type":0
+			},
+			{
+				"name":"发票类型",
+				"key":"invoice_type",
+				"type":0
+			}
+		],
+		"table":[
+		{
+			"business_id": {
+				"title":"业务编号",
+				"key"  : "1",
+				"value": "1"
+			},
+			"partner_name": {
+				"key"  : "12",
+				"value": "嗨皮（上海）网络科技有限公司"
+			},
+			"business_team_name": {
+				"key"  : "123",
+				"value": "移动组"
+			},
+			"delivery_month": {
+				"key"  : "2015-02",
+				"value": "2015-02"
+			},
+            "delivery_amount": {
+				"key"  : "2015-02",
+				"value": 200000.00
+			},
+            "expenses_amount": {
+				"key"  : "2015-02",
+				"value": 10000.00
+			},
+            "expenses_type": {
+				"key"  : "2015-02",
+				"value": "分成"
+			},
+            "expenses_partner_name": {
+				"key"  : "2015-02",
+				"value": "厦门极致互动"
+			},
+            "expenses_advance_time": {
+				"key"  : "2015-02",
+				"value": "2015-02-02"
+			},
+            "expenses_payment": {
+				"key"  : "2015-02",
+				"value": 2000.00
+			},
+            "expenses_time": {
+				"key"  : "2015-02-02",
+				"value": "2015-02-02"
+			},
+            "invoice_amount": {
+				"key"  : "2015-02-123",
+				"value": 180000.00
+			},
+            "invoice_key": {
+				"key"  : "2015-02-123",
+				"value": "2353543"
+			},
+            "invoice_type": {
+				"key"  : "2015-02-123",
+				"value": "技术服务"
+			}
+		},
+		{
+			"business_id": {
+				"key"  : "1",
+				"value": "1"
+			},
+			"partner_name": {
+				"key"  : "12",
+				"value": "嗨皮（上海）网络科技有限公司"
+			},
+			"business_team_name": {
+				"key"  : "123",
+				"value": "移动组"
+			},
+			"delivery_month": {
+				"key"  : "2015-02",
+				"value": "2015-02"
+			},
+            "delivery_amount": {
+				"key"  : "2015-02",
+				"value": 200000.00
+			},
+            "expenses_amount": {
+				"key"  : "2015-03",
+				"value": 10000.00
+			},
+            "expenses_type": {
+				"key"  : "2015-03",
+				"value": "分成"
+			},
+            "expenses_partner_name": {
+				"key"  : "2015-03",
+				"value": "厦门极致互动"
+			},
+            "expenses_advance_time": {
+				"key"  : "2015-03",
+				"value": "2015-02-02"
+			},
+            "expenses_payment": {
+				"key"  : "2015-03",
+				"value": 2000.00
+			},
+            "expenses_time": {
+				"key"  : "2015-03-02",
+				"value": "2015-02-02"
+			},
+            "invoice_amount": {
+				"key"  : "2015-03-123",
+				"value": 180000.00
+			},
+            "invoice_key": {
+				"key"  : "2015-03-123",
+				"value": "2353543"
+			},
+            "invoice_type": {
+				"key"  : "2015-03-123",
+				"value": "技术服务"
+			}
+		},
+		{
+			"business_id": {
+				"key"  : "1",
+				"value": "1"
+			},
+			"partner_name": {
+				"key"  : "12",
+				"value": "嗨皮（上海）网络科技有限公司"
+			},
+			"business_team_name": {
+				"key"  : "123",
+				"value": "移动组"
+			},
+			"delivery_month": {
+				"key"  : "2015-04",
+				"value": "2015-02"
+			},
+            "delivery_amount": {
+				"key"  : "2015-04",
+				"value": 200000.00
+			},
+            "expenses_amount": {
+				"key"  : "2015-04",
+				"value": 10000.00
+			},
+            "expenses_type": {
+				"key"  : "2015-04",
+				"value": "分成"
+			},
+            "expenses_partner_name": {
+				"key"  : "2015-04",
+				"value": "厦门极致互动"
+			},
+            "expenses_advance_time": {
+				"key"  : "2015-04",
+				"value": "2015-02-02"
+			},
+            "expenses_payment": {
+				"key"  : "2015-04",
+				"value": 2000.00
+			},
+            "expenses_time": {
+				"key"  : "2015-04-02",
+				"value": "2015-02-02"
+			},
+            "invoice_amount": {
+				"key"  : "2015-04-123",
+				"value": 180000.00
+			},
+            "invoice_key": {
+				"key"  : "2015-04-123",
+				"value": "2353543"
+			},
+            "invoice_type": {
+				"key"  : "2015-04-123",
+				"value": "技术服务"
+			}
+		},{
+			"business_id": {
+				"key"  : "1",
+				"value": "1"
+			},
+			"partner_name": {
+				"key"  : "12",
+				"value": "嗨皮（上海）网络科技有限公司"
+			},
+			"business_team_name": {
+				"key"  : "124",
+				"value": "移动组"
+			},
+			"delivery_month": {
+				"key"  : "2015-05",
+				"value": "2015-02"
+			},
+            "delivery_amount": {
+				"key"  : "2015-05",
+				"value": 200000.00
+			},
+            "expenses_amount": {
+				"key"  : "2015-05",
+				"value": 10000.00
+			},
+            "expenses_type": {
+				"key"  : "2015-05",
+				"value": "分成"
+			},
+            "expenses_partner_name": {
+				"key"  : "2015-05",
+				"value": "厦门极致互动"
+			},
+            "expenses_advance_time": {
+				"key"  : "2015-05",
+				"value": "2015-02-02"
+			},
+            "expenses_payment": {
+				"key"  : "2015-05",
+				"value": 2000.00
+			},
+            "expenses_time": {
+				"key"  : "2015-05-02",
+				"value": "2015-02-02"
+			},
+            "invoice_amount": {
+				"key"  : "2015-05-123",
+				"value": 180000.00
+			},
+            "invoice_key": {
+				"key"  : "2015-05-123",
+				"value": "2353543"
+			},
+            "invoice_type": {
+				"key"  : "2015-05-123",
+				"value": "技术服务"
+			}
+		}
+	]
+	}
+}

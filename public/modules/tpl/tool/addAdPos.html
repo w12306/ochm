@@ -1,0 +1,86 @@
+<form id="js-data-form-validate" action="<%=ST.ACTION.addData%>" method="">
+    <table class="table table-listing table-hovered" style="width:550px;">
+        <tbody>
+        <tr>
+            <td class="span5"><em class="text-red">* </em><%=typename%>名称：</td>
+            <td>
+                <input class="input input-small" type="text" name="name" value="<%=detail.name%>" data-rules="required">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5">CODE值：</td>
+            <td>
+                <input class="input input-small" type="text" name="code" value="<%=detail.code%>" data-rules="">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>最大轮数：</td>
+            <td>
+                <input class="input input-small" type="text" name="max_rounds" value="<%=detail.max_rounds%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>平时刊例价：</td>
+            <td>
+                <input class="input input-small" type="text" name="usually_price" value="<%=detail.usually_price%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>周末刊例例价：</td>
+            <td>
+                <input class="input input-small" type="text" name="weekend_price" value="<%=detail.weekend_price%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>平时折扣：</td>
+            <td>
+                <input class="input input-small" type="text" name="usually_discount" value="<%=detail.usually_discount%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>周末折扣：</td>
+            <td>
+                <input class="input input-small" type="text" name="weekend_discount" value="<%=detail.weekend_discount%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>平时价值：</td>
+            <td>
+                <input class="input input-small" type="text" name="usually_value" value="<%=detail.usually_value%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="span5"><em class="text-red">* </em>周末价值：</td>
+            <td>
+                <input class="input input-small" type="text" name="weekend_value" value="<%=detail.weekend_value%>" data-rules="required match(/^(-?\d+)(\.\d+)?$/)" data-msg="必填 请输入数值">
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="span4">广告规格描述：</td>
+            <td>
+                <textarea name="remark" id="" cols="50" rows="5" ><%=detail.remark%></textarea>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="span5"></td>
+            <td>
+                <input type="hidden" name="type" value="<%=type%>">
+                <input type="hidden" name="id" value="<%=id%>">
+                <input class="btn btn-blue" type="submit" value="确定">
+                <a class="btn js-add-data-type-n" href="javascript:;">取消</a>
+            </td>
+        </tr>
+        </tbody>
+   </table>
+</form>

@@ -1,0 +1,16 @@
+{
+    "status": "success",
+    "info": "",
+    "data": {
+        "pd_sname":"产品简称",
+        "product_id":"111",
+        "partner_id":"222",
+        "company_id":"123",
+        "business_cooperation":"333",
+        "sell_type":"444",
+        "advertis_name":"广告位",
+        "dtime":"投放时间",
+        "status_text":"wwww",
+        "executive_key":"123"
+    }
+}

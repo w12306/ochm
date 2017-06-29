@@ -1,0 +1,100 @@
+<!--
+{manageNetbar_tmp}
+<form onsubmit="return false" stverify="true" ajaxpost="true"  erroappend="true" method="post" action="{action}">
+    <table class="table table-listing table-hovered">
+        <tbody>
+        <tr>
+            <td class="span4">可用机器数</td>
+            <td>
+                <input type="text" name="number" opt="rq int" value="{data.machine}" maxlength="5" class="text" />
+            </td>
+        </tr>
+        <tr>
+            <td class="span4">增加可用天数</td>
+            <td>
+                <input type="text" name="days" opt="rq int" value="{data.day}" maxlength="5" class="text" />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+{/manageNetbar_tmp}
+
+
+{netbarDisable_tmp}
+<form onsubmit="return false" stverify="true" ajaxpost="true"  erroappend="true" method="post" action="{action}">
+    <table class="table table-listing table-hovered">
+        <tbody>
+        <tr>
+            <td class="span4">禁用备注</td>
+            <td>
+                <textarea name="description" cols="50" rows="5" maxlength="200" opt="rq" style="height: 230px"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="span4"></td>
+            <td>
+                <p class="text-gray">是否确认禁用？</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+{/netbarDisable_tmp}
+
+{form_confmsg_tpl}
+<div class="form-confirm" >是否确认修改？</div>
+{/form_confmsg_tpl}
+
+{form_confmsg_add_tpl}
+<div class="form-confirm" >是否确认添加？</div>
+{/form_confmsg_add_tpl}
+
+{ac_num_tpl}
+<table class="table table-listing table-hovered">
+    <tbody>
+     {for(var i=0,j=data.length,dl;i<j,dl=data[i];i++)}
+    <tr>
+      <td>{dl.text}:</td>
+      <td>{dl.value} 个</td>
+    </tr>
+    {/for}
+  </tbody>
+</table>
+{/ac_num_tpl}
+
+
+
+{common_areaselect_version}
+{for(var i=0,l=data.alist.length,c,d;i<l,d=data.alist[i];i++)}
+    <dl class="clearfix">
+         <dt><input type="checkbox" data-cmd="checkAll">{d.name}：</dt>
+         {c=data.plist[d.id]}
+         <div class="regionalList-dd clearfix">
+            {for(var j=0,ll=c.length,dl;j<ll,dl=c[j];j++)}
+                <dd><input name="city" value="{dl.id}" type="checkbox">{dl.name}</dd>
+            {/for}
+         </div>
+    </dl>
+{/for}
+{/common_areaselect_version}
+
+
+{common_area_display_version}
+{for(var i=0,l=data.alist.length,c,d;i<l,d=data.alist[i];i++)}
+    <dl class="clearfix">
+         <dt>{d.name}：</dt>
+         {c=data.plist[d.id]}
+         <div class="regionalList-dd clearfix">
+            {for(var j=0,ll=c.length,dl;j<ll,dl=c[j];j++)}
+                {for(var m=0,n,k=sdata.length;m<k,n=sdata[m];m++)}
+                    {if(dl.id==n.releaseKey)}
+                        <dd>{dl.name}</dd>
+                    {/if}
+                {/for}
+            {/for}
+         </div>
+    </dl>
+{/for}
+{/common_area_display_version}
+-->
